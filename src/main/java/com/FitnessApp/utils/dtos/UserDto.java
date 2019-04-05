@@ -1,6 +1,5 @@
 package com.FitnessApp.utils.dtos;
 
-import com.FitnessApp.model.Role;
 import com.FitnessApp.model.State;
 
 import java.util.Objects;
@@ -27,7 +26,7 @@ public class UserDto {
     /**
      * Creates UserDto for sign up
      *
-     * @param username    user's login
+     * @param username user's login
      * @param password user's password
      * @param email    user's email
      */

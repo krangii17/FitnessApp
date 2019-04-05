@@ -2,8 +2,6 @@ package com.FitnessApp.utils.converters;
 
 import com.FitnessApp.model.Restriction;
 import com.FitnessApp.utils.dtos.RestrictionDTO;
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component

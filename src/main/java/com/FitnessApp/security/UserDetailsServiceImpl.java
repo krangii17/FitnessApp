@@ -23,12 +23,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String userLogin)
             throws UsernameNotFoundException, IllegalArgumentException {
 
-       Optional<List<User>> user = dao.getByParameter(User.class, "email", userLogin);
+        Optional<List<User>> user = dao.getByParameter(User.class, "email", userLogin);
 
-       if (!user.isPresent() || (user.get().size() == 0)) {
+        if (!user.isPresent() || (user.get().size() == 0)) {
             throw new UsernameNotFoundException(userLogin);
         } else if (user.get().size() > 1) {
-           throw new IllegalArgumentException("Detected more than one user");
+            throw new IllegalArgumentException("Detected more than one user");
         } else {
             return new UserDetailsImpl(user.get().get(0));
         }

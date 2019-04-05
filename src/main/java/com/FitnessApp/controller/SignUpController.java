@@ -16,15 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SignUpController {
     private static final String MODEL = "user";
-
-    @Autowired
-    private SignUpService signUpService;
-
-    @Autowired
-    private UserCandidateValidator userCandidateValidator;
-
     @Autowired
     BCryptPasswordEncoder encoder;
+    @Autowired
+    private SignUpService signUpService;
+    @Autowired
+    private UserCandidateValidator userCandidateValidator;
 
     @ApiOperation(httpMethod = "POST",
             value = "Resource to sign up new user",

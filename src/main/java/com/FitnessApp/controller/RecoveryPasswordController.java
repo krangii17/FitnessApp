@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
-
 @Api(description = "This controller is used for recovery password", consumes = "application/json")
 @RestController
 public class RecoveryPasswordController {
@@ -35,7 +32,7 @@ public class RecoveryPasswordController {
     @GetMapping(value = "/getSecret")
     public ResponseEntity recovery(String email) {
         UserRecoveryDTO dto = converter.getRecoveryEmail(email);
-        if (dto.getSecretQuestion()!=null) {
+        if (dto.getSecretQuestion() != null) {
             return ResponseEntity.ok(dto);
         } else {
             return ResponseEntity.status(409).build();

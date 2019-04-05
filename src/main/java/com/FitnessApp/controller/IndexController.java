@@ -13,7 +13,7 @@ public class IndexController {
 
     @ApiOperation(httpMethod = "GET",
             value = "Resource to redirect to Angular server by port 4200")
-    @RequestMapping(value={"/", "index"}, method= RequestMethod.GET)
+    @RequestMapping(value = {"/", "index"}, method = RequestMethod.GET)
     public ModelAndView index() {
         return new ModelAndView("redirect:" + "http://localhost:4200/");
     }

@@ -30,7 +30,7 @@ public interface GoalService {
      * Updates exist goal
      *
      * @param dto current goal title
-     * @param id new goal title
+     * @param id  new goal title
      * @return if goal is exist - return true, another case - false
      */
     boolean updateGoal(GoalDto dto, Long id);
@@ -39,7 +39,7 @@ public interface GoalService {
      * Deletes goal
      *
      * @param dto goal transfer object
-     * @param id id of goal for deleting
+     * @param id  id of goal for deleting
      * @return if goal is exist - return true, another case - false
      */
     boolean deleteGoal(GoalDto dto, Long id);

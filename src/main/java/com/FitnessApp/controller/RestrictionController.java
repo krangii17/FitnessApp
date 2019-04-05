@@ -20,10 +20,10 @@ import java.util.stream.Collectors;
 public class RestrictionController {
 
     @Autowired
-    private  RestrictionConverter converter;
+    private RestrictionConverter converter;
 
     @Autowired
-    private  RestrictionService service;
+    private RestrictionService service;
 
     @ApiOperation(httpMethod = "GET",
             value = "Resource to get list of restrictions",

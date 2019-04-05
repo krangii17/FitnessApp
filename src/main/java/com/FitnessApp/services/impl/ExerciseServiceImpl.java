@@ -72,7 +72,7 @@ public class ExerciseServiceImpl implements ExerciseService {
             } else {
                 throw new ObjectNotFoundException(id.intValue());
             }
-    }
+        }
     }
 
     @Override

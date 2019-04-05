@@ -29,24 +29,20 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 public class MusclesGroupControllerTest {
 
-    @InjectMocks
-    private MusclesGroupController controller;
-
-    @Mock
-    private MusclesGroupConverter converter;
-
     private static final MediaType APPLICATION_JSON_UTF8 =
             new MediaType(MediaType.APPLICATION_JSON.getType(),
                     MediaType.APPLICATION_JSON.getSubtype(),
                     Charset.forName("utf8"));
-
-    private MockMvc mockMvc;
-
-    private List<MusclesGroup> musclesGroupList;
-    private List<MusclesGroupDTO> musclesGroupDTOList;
     private final Long index = 0L;
     @Mock
     MusclesGroupService service;
+    @InjectMocks
+    private MusclesGroupController controller;
+    @Mock
+    private MusclesGroupConverter converter;
+    private MockMvc mockMvc;
+    private List<MusclesGroup> musclesGroupList;
+    private List<MusclesGroupDTO> musclesGroupDTOList;
 
     private MusclesGroup getMusclesGroupObject(Long id, String groupName) {
         MusclesGroup musclesGroup = new MusclesGroup();
@@ -165,7 +161,6 @@ public class MusclesGroupControllerTest {
                 .andDo(print()).andExpect(status().is(400));
 
     }
-
 
 
     @Test

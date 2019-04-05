@@ -16,7 +16,7 @@ public class ObjectNotFoundAdviceController {
     @ResponseBody
     @ExceptionHandler(ObjectNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String objectNotFoundHandler(ObjectNotFoundException ex) throws Exception{
+    String objectNotFoundHandler(ObjectNotFoundException ex) throws Exception {
         ObjectMapper mapper = new ObjectMapper();
         return mapper.writeValueAsString(ex.getMessage());
     }

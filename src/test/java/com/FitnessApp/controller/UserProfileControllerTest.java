@@ -50,7 +50,7 @@ public class UserProfileControllerTest {
     private ObjectMapper mapper;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         MockitoAnnotations.initMocks(this);
         this.mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
 

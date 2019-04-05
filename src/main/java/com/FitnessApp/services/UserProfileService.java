@@ -14,7 +14,7 @@ public interface UserProfileService {
 
     UserProfileDTO getProfileData(User user);
 
-    boolean changeProfileData(UserProfileDTO dto,  User user);
+    boolean changeProfileData(UserProfileDTO dto, User user);
 
     void deleteById(Long id);
 }

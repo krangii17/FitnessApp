@@ -4,13 +4,12 @@ import com.FitnessApp.model.Gender;
 import com.FitnessApp.model.User;
 import com.FitnessApp.model.UserParameters;
 import com.FitnessApp.utils.dtos.UserProfileDTO;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class UserProfileConverterTest {
 

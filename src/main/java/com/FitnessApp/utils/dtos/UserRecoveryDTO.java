@@ -3,7 +3,8 @@ package com.FitnessApp.utils.dtos;
 public class UserRecoveryDTO {
     private String secretQuestion;
 
-    public UserRecoveryDTO(){}
+    public UserRecoveryDTO() {
+    }
 
     public UserRecoveryDTO(String secretQuestion) {
         this.secretQuestion = secretQuestion;

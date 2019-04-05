@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "user_parameters")
-public class  UserParameters {
+public class UserParameters {
     @Id
     @Column(name = "user_parameters_id", unique = true, nullable = false)
     private Long ID;

@@ -1,9 +1,7 @@
 package com.FitnessApp.utils.dtos;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonTypeId;
 
-import javax.persistence.Id;
 import java.util.Date;
 import java.util.Objects;
 

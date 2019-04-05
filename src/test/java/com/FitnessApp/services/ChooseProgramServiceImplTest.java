@@ -52,7 +52,7 @@ public class ChooseProgramServiceImplTest {
     private Goal goal;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         MockitoAnnotations.initMocks(this);
 
         user = new User();

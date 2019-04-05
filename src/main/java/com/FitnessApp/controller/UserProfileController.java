@@ -87,7 +87,7 @@ public class UserProfileController {
 
     @RequestMapping(path = "/profiles/auth-user", method = RequestMethod.POST)
     public ResponseEntity addUserProgramByAuthUser(Authentication authentication,
-                                                 @RequestBody UserProfileDTO userProfileDTO) {
+                                                   @RequestBody UserProfileDTO userProfileDTO) {
 
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         return addUserProgramByUserID(userDetails.getUser().getId(), userProfileDTO);

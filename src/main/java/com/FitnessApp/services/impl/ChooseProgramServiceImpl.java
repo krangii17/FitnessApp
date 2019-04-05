@@ -17,6 +17,8 @@ import java.util.List;
 public class ChooseProgramServiceImpl implements ChooseProgramService {
 
     @Autowired
+    ProgramTemplateConverter programTemplateConverter;
+    @Autowired
     private UserProfileService userProfileService;
     @Autowired
     private UserService userService;
@@ -24,14 +26,12 @@ public class ChooseProgramServiceImpl implements ChooseProgramService {
     private ProgramTemplateService programTemplateService;
     @Autowired
     private GoalService goalService;
-    @Autowired
-    ProgramTemplateConverter programTemplateConverter;
 
     public ChooseProgramServiceImpl() {
     }
 
     @Override
-    public ProgramTemplateDto findProgramsTemplate(Long goalId, Long userId){
+    public ProgramTemplateDto findProgramsTemplate(Long goalId, Long userId) {
 
         User userById = userService.getUserById(userId);
         UserProfileDTO profileData = userProfileService.getProfileData(userById);
@@ -41,7 +41,7 @@ public class ChooseProgramServiceImpl implements ChooseProgramService {
         List<ProgramTemplate> programList = programTemplateService.getAll().get();
         for (ProgramTemplate program : programList) {
             if ((program.getNumberOfDays() != trainDayQuantity) &&
-                    !program.getGoal().getGoalTitle().equals(goalTitle)){
+                    !program.getGoal().getGoalTitle().equals(goalTitle)) {
                 programList.remove(program);
             }
         }

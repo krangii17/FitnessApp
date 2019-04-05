@@ -30,7 +30,7 @@ public class UserProfileConverter {
     public UserProfileDTO convertToProfileDTO(User user) {
         UserParameters userParameters;
 
-        if (user.getUserParameters()!= null) {
+        if (user.getUserParameters() != null) {
             userParameters = user.getUserParameters();
         } else {
             userParameters = getEmptyUserParameters();

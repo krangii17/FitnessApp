@@ -18,18 +18,15 @@ public class ProgramTemplate {
     @JoinColumn(name = "exercise_id")
     private Exercise exercise;
 
-    //@NotEmpty
     @Column(name = "percent_of_maximum")
     private Integer percentOfMaximum;
 
-    //@NotEmpty
     @Column(name = "sets")
     private Integer sets;
 
     @Column(name = "reps")
     private Integer reps;
 
-    //@NotEmpty
     @Column(name = "program_name")
     private String programName;
 
@@ -37,11 +34,9 @@ public class ProgramTemplate {
     @JoinColumn(name = "goal_id")
     private Goal goal;
 
-    //@NotEmpty
     @Column(name = "number_of_days")
     private Integer numberOfDays;
 
-    //@NotEmpty
     @Column(name = "is_base_program")
     private Boolean isBaseProgram;
 

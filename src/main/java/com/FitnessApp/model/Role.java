@@ -8,11 +8,6 @@ import java.util.List;
 public enum Role implements GrantedAuthority {
     ROLE_USER, ROLE_COACH, ROLE_ADMIN, ROLE_GUEST;
 
-    @Override
-    public String getAuthority() {
-        return name();
-    }
-
     public static List<String> getAllRoles() {
         List<String> roles = new ArrayList<>();
         for (Role role : Role.values()) {
@@ -21,5 +16,10 @@ public enum Role implements GrantedAuthority {
             }
         }
         return roles;
+    }
+
+    @Override
+    public String getAuthority() {
+        return name();
     }
 }

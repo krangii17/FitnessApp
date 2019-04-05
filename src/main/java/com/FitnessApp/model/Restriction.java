@@ -1,7 +1,6 @@
 package com.FitnessApp.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
 import java.util.Set;
 
@@ -13,11 +12,9 @@ public class Restriction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long restID;
 
-//    @NotEmpty
     @Column(name = "restriction_name")
     private String name;
 
-//    @NotEmpty
     @Column(name = "evaluation")
     private Integer evaluation;
 

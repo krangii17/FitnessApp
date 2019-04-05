@@ -22,7 +22,8 @@ public class UserStartParam {
     @JoinColumn(name = "program_template_id")
     private ProgramTemplate programTemplate;
 
-    public UserStartParam() { }
+    public UserStartParam() {
+    }
 
     public Long getID() {
         return ID;

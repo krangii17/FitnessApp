@@ -22,11 +22,10 @@ import static org.mockito.Mockito.when;
 
 public class RestrictionServiceImplTest {
 
-    private Restriction restriction;
-    private List<Restriction> restrictions;
     int firstElement;
     long idOfCheckingElement;
-
+    private Restriction restriction;
+    private List<Restriction> restrictions;
     @Mock
     private RestrictionService restrictionService;
     @Mock

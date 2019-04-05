@@ -65,7 +65,7 @@ public class UserProfileServiceImpl implements UserProfileService {
     }
 
     @Override
-    public void deleteById(Long id) throws ObjectNotFoundException{
+    public void deleteById(Long id) throws ObjectNotFoundException {
         Optional<UserParameters> deletedObj = getUserParametersById(id);
         if (!deletedObj.isPresent()) {
             throw new ObjectNotFoundException(id.intValue());

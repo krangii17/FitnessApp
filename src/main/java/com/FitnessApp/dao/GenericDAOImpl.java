@@ -2,9 +2,9 @@ package com.FitnessApp.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -16,11 +16,12 @@ public class GenericDAOImpl implements GenericDAO {
     private EntityManager em;
 
     @Override
-    public <T> Optional<List<T>> getByParameter(Class<T> clazz, String parameterName, String parameterValue){
+    public <T> Optional<List<T>> getByParameter(Class<T> clazz, String parameterName, String parameterValue) {
         return Optional.ofNullable(em.createQuery("from " + clazz.getName() + " as p where p." + parameterName + " =: parameterValue")
                 .setParameter("parameterValue", parameterValue)
                 .getResultList());
     }
+
     @Override
     public <T> Optional<List<T>> getAll(Class<T> clazz) {
         return Optional.ofNullable(em.createQuery("from " + clazz.getName()).getResultList());
@@ -28,22 +29,22 @@ public class GenericDAOImpl implements GenericDAO {
 
     @Override
     public <T> Optional<T> getByID(Class<T> clazz, Number number) {
-        return Optional.ofNullable(em.find( clazz, number ));
+        return Optional.ofNullable(em.find(clazz, number));
     }
 
     @Override
     public <T> void save(T obj) {
-        em.persist( obj );
+        em.persist(obj);
     }
 
     @Override
     public <T> T update(T obj) {
-        return em.merge( obj );
+        return em.merge(obj);
     }
 
     @Override
     public <T> void delete(T obj) {
-        em.remove( obj );
+        em.remove(obj);
     }
 
     @Override

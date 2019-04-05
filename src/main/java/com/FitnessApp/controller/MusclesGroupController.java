@@ -32,7 +32,7 @@ public class MusclesGroupController {
             value = "Resource to get list of muscles groups",
             nickname = "get list of muscles groups",
             response = MusclesGroupDTO.class,
-            responseContainer="List",
+            responseContainer = "List",
             authorizations = {@Authorization(value = "basicAuth")})
 
     @RequestMapping(path = "/muscles-groups", method = RequestMethod.GET,

@@ -2,8 +2,6 @@ package com.FitnessApp.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -79,16 +77,16 @@ public class User implements Serializable {
         return state;
     }
 
+    public void setState(State state) {
+        this.state = state;
+    }
+
     public UserParameters getUserParameters() {
         return userParameters;
     }
 
     public void setUserParameters(UserParameters userParameters) {
         this.userParameters = userParameters;
-    }
-
-    public void setState(State state) {
-        this.state = state;
     }
 
     public String getSecretQuestion() {

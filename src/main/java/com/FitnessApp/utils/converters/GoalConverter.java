@@ -2,7 +2,6 @@ package com.FitnessApp.utils.converters;
 
 import com.FitnessApp.model.Goal;
 import com.FitnessApp.utils.dtos.GoalDto;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;

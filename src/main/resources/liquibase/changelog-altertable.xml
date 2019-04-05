@@ -1,97 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
     <changeSet id="add-fk-between-exercise-and-training" author="ivko">
         <addForeignKeyConstraint constraintName="FKdgf11138wea34dd612056iuds"
                                  baseTableName="exercise" baseColumnNames="training_id" referencedTableName="training"
-                                 referencedColumnNames="train_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 referencedColumnNames="train_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-group_of_muscles-and-exercise" author="ivko">
         <addForeignKeyConstraint constraintName="FKbp3evibjl7m43mmybgpelwsql"
                                  baseTableName="group_of_muscles" baseColumnNames="ex_id" referencedTableName="exercise"
-                                 referencedColumnNames="ex_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 referencedColumnNames="ex_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-program_template-and-exercise" author="ivko">
         <addForeignKeyConstraint constraintName="FKb098528i3hh67hyh37fo9uxrt"
-                                 baseTableName="program_template" baseColumnNames="exercise_id" referencedTableName="exercise"
-                                 referencedColumnNames="ex_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 baseTableName="program_template" baseColumnNames="exercise_id"
+                                 referencedTableName="exercise"
+                                 referencedColumnNames="ex_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-program_template-and-goal" author="ivko">
         <addForeignKeyConstraint constraintName="FKjb0xg9qli2y8tcdi329gx6ave"
                                  baseTableName="program_template" baseColumnNames="goal_id" referencedTableName="goal"
-                                 referencedColumnNames="goal_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 referencedColumnNames="goal_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-restrictions-and-exercise" author="ivko">
         <addForeignKeyConstraint constraintName="FKbhipgebfq34528rapa5xko5bi"
                                  baseTableName="restrictions" baseColumnNames="ex_id" referencedTableName="exercise"
-                                 referencedColumnNames="ex_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 referencedColumnNames="ex_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-schedule_id-and-schedule" author="ivko">
         <addForeignKeyConstraint constraintName="FKldk7d224vkjxpscota7lrtknh"
-                                 baseTableName="schedule_id" baseColumnNames="schedule_schedule_id" referencedTableName="schedule"
-                                 referencedColumnNames="schedule_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 baseTableName="schedule_id" baseColumnNames="schedule_schedule_id"
+                                 referencedTableName="schedule"
+                                 referencedColumnNames="schedule_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-schedule_id-and-user_parameters" author="ivko">
         <addForeignKeyConstraint constraintName="FKkaa146ofjwc2hv2xtrc0yj44"
-                                 baseTableName="schedule_id" baseColumnNames="user_parameters_id" referencedTableName="user_parameters"
-                                 referencedColumnNames="user_parameters_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 baseTableName="schedule_id" baseColumnNames="user_parameters_id"
+                                 referencedTableName="user_parameters"
+                                 referencedColumnNames="user_parameters_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-training-and-schedule" author="ivko">
         <addForeignKeyConstraint constraintName="FKsh309if5waqsxfyxi31ax4gin"
                                  baseTableName="training" baseColumnNames="schedule_id" referencedTableName="schedule"
-                                 referencedColumnNames="schedule_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 referencedColumnNames="schedule_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-user_parameters-and-user" author="ivko">
         <addForeignKeyConstraint constraintName="FKptv7tsd3cy1a7tj0rct7gaoq3"
                                  baseTableName="user_parameters" baseColumnNames="user_id" referencedTableName="user"
-                                 referencedColumnNames="user_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 referencedColumnNames="user_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-user_program-and-user" author="ivko">
         <addForeignKeyConstraint constraintName="FKj0gfrrt70n7nuonltud91h97w"
                                  baseTableName="user_program" baseColumnNames="user_id" referencedTableName="user"
-                                 referencedColumnNames="user_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 referencedColumnNames="user_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-users_parameters_restrictions-and-restrictions" author="ivko">
         <addForeignKeyConstraint constraintName="FKbctyj8gyout5ixnr5uy6idncf"
-                                 baseTableName="users_parameters_restrictions" baseColumnNames="restriction_ID" referencedTableName="restrictions"
-                                 referencedColumnNames="rest_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 baseTableName="users_parameters_restrictions" baseColumnNames="restriction_ID"
+                                 referencedTableName="restrictions"
+                                 referencedColumnNames="rest_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-users_parameters_restrictions-and-user_parameters" author="ivko">
         <addForeignKeyConstraint constraintName="FKr571g0mhi1sr18nm7yni11of8"
-                                 baseTableName="users_parameters_restrictions" baseColumnNames="user_parameter_ID" referencedTableName="user_parameters"
-                                 referencedColumnNames="user_parameters_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 baseTableName="users_parameters_restrictions" baseColumnNames="user_parameter_ID"
+                                 referencedTableName="user_parameters"
+                                 referencedColumnNames="user_parameters_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-user_start_parameters-and-exercises" author="ivko">
         <addForeignKeyConstraint constraintName="FKm9w672dbyo6nass9tlqee9ojo"
-                                 baseTableName="user_start_parameters" baseColumnNames="exercise_id" referencedTableName="exercise"
-                                 referencedColumnNames="ex_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 baseTableName="user_start_parameters" baseColumnNames="exercise_id"
+                                 referencedTableName="exercise"
+                                 referencedColumnNames="ex_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-program_template-and-user" author="ivko">
         <addForeignKeyConstraint constraintName="FKp9iv4t7yij57al0ehtvbstiyc"
                                  baseTableName="program_template" baseColumnNames="user_id" referencedTableName="user"
-                                 referencedColumnNames="user_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 referencedColumnNames="user_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="add-fk-between-user_start_parameters-and-program_template" author="ivko">
         <addForeignKeyConstraint constraintName="FKdd02aldfi5sc6fn1pdrnckrbl"
-                                 baseTableName="user_start_parameters" baseColumnNames="program_template_id" referencedTableName="program_template"
-                                 referencedColumnNames="program_template_id" onDelete="CASCADE" onUpdate="CASCADE" />
+                                 baseTableName="user_start_parameters" baseColumnNames="program_template_id"
+                                 referencedTableName="program_template"
+                                 referencedColumnNames="program_template_id" onDelete="CASCADE" onUpdate="CASCADE"/>
     </changeSet>
 
     <changeSet id="tag-altertable" author="ivko">

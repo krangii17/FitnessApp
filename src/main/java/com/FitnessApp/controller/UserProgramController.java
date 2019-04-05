@@ -56,7 +56,7 @@ public class UserProgramController {
             value = "Resource to get List of objects 'UserProgram' by ID User ",
             nickname = "get list of UserProgram by idUser",
             response = UserProgramDTO.class,
-            responseContainer="List",
+            responseContainer = "List",
             authorizations = {@Authorization(value = "basicAuth")})
 
     @RequestMapping(path = "/user-programs/users/{idUser}", method = RequestMethod.GET, produces = "application/json")
@@ -73,7 +73,7 @@ public class UserProgramController {
             value = "Resource to get list of objects 'UserProgram' by Authenticated user ",
             nickname = "get list of UserProgram by Auth user",
             response = UserProgramDTO.class,
-            responseContainer="List",
+            responseContainer = "List",
             authorizations = {@Authorization(value = "basicAuth")})
 
     @RequestMapping(path = "/user-programs/auth-user", method = RequestMethod.GET, produces = "application/json")
