@@ -1,80 +1,78 @@
 <div align="center">
-  <input type="text" class="form-control" placeholder="Search user" [(ngModel)]="searchText" style="width: 80%"/>
+    <input type="text" class="form-control" placeholder="Search user" [(ngModel)]="searchText" style="width: 80%"/>
 </div>
 
 <div align="center">
-  <table class="table table-hover" >
-    <thead class="thead-dark">
-    <tr>
-      <th>id</th>
-      <th>firstname</th>
-      <th>lastname</th>
-      <th>email</th>
-      <th>role</th>
-      <th>status</th>
-      <th>action</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let user of users | userFilter: searchText"
-        (click)="setClickedRow(user.id)"
-        [class.active]= "user.id == selectedRow" >
-      <!--add rout to user profile by using dblclick -->
-      <!--(dblclick)=""-->
-      <ng-template [ngTemplateOutlet]="loadTemplate(user)"
-                   [ngTemplateOutletContext]="{ $implicit: user}">
-      </ng-template>
-    </tr>
-    </tbody>
-  </table>
-  <p>
-    Selected id : <strong>{{selectedRow}}</strong>
-  </p>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>id</th>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>email</th>
+            <th>role</th>
+            <th>status</th>
+            <th>action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users | userFilter: searchText"
+            (click)="setClickedRow(user.id)"
+            [class.active]="user.id == selectedRow">
+            <ng-template [ngTemplateOutlet]="loadTemplate(user)"
+                         [ngTemplateOutletContext]="{ $implicit: user}">
+            </ng-template>
+        </tr>
+        </tbody>
+    </table>
+    <p>
+        Selected id : <strong>{{selectedRow}}</strong>
+    </p>
 </div>
 
 <ng-template #readOnlyTemplate let-user>
-  <td>{{user.id}}</td>
-  <td>{{user.firstName}}</td>
-  <td>{{user.lastName}}</td>
-  <td>{{user.email}}</td>
-  <td>{{user.role}}</td>
-  <td>{{user.status}}</td>
-  <td>
-    <input type="button" value="Edit" class="btn btn-outline-warning" (click)="editUser(user, user.id)" />
-    <input type="button" value="Delete" (click)="deleteUser(user)" class="btn btn-outline-danger" />
-  </td>
+    <td>{{user.id}}</td>
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.role}}</td>
+    <td>{{user.status}}</td>
+    <td>
+        <input type="button" value="Edit" class="btn btn-outline-warning" (click)="editUser(user, user.id)"/>
+        <input type="button" value="Delete" (click)="deleteUser(user)" class="btn btn-outline-danger"/>
+    </td>
 </ng-template>
 
 
 <ng-template #editTemplate>
-  <td>
-    <input type="text" [(ngModel)]="editedUser.id" readonly disabled class="form-control" />
-  </td>
-  <td>
-    <input type="text" [(ngModel)]="editedUser.firstName" class="form-control" />
-  </td>
-  <td>
-    <input type="text" [(ngModel)]="editedUser.lastName" class="form-control" />
-  </td>
-  <td>
-    <input type="text" [(ngModel)]="editedUser.email" class="form-control" />
-  </td>
-  <td>
-    <select [(ngModel)]="editedUser.role" class="form-control">
-      <option *ngFor="let role of roles" [value]="role">
-        {{role}}
-      </option>
-    </select>
-  </td>
-  <td>
-    <select [(ngModel)]="editedUser.status" class="form-control">
-      <option *ngFor="let position of status" [value]="position">
-        {{position}}
-      </option>
-    </select>
-  </td>
-  <td>
-    <input type="button" value="Save" (click)="saveUser()" class="btn btn-outline-success" />
-    <input type="button" value="Cancel" (click)="cancel()" class="btn btn-outline-warning" />
-  </td>
+    <td>
+        <input type="text" [(ngModel)]="editedUser.id" readonly disabled class="form-control"/>
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="editedUser.firstName" class="form-control"/>
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="editedUser.lastName" class="form-control"/>
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="editedUser.email" class="form-control"/>
+    </td>
+    <td>
+        <select [(ngModel)]="editedUser.role" class="form-control">
+            <option *ngFor="let role of roles" [value]="role">
+                {{role}}
+            </option>
+        </select>
+    </td>
+    <td>
+        <select [(ngModel)]="editedUser.status" class="form-control">
+            <option *ngFor="let position of status" [value]="position">
+                {{position}}
+            </option>
+        </select>
+    </td>
+    <td>
+        <input type="button" value="Save" (click)="saveUser()" class="btn btn-outline-success"/>
+        <input type="button" value="Cancel" (click)="cancel()" class="btn btn-outline-warning"/>
+    </td>
 </ng-template>

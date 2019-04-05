@@ -24,6 +24,11 @@ export class LoginComponent implements OnInit {
         private authenticationService: AuthenticationService) {
     }
 
+    // convenience getter for easy access to form fields
+    get f() {
+        return this.loginForm.controls;
+    }
+
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
             username: ['', [Validators.required, Validators.email]],
@@ -33,11 +38,6 @@ export class LoginComponent implements OnInit {
         this.authenticationService.logout();
         // get return url from route parameters or default to '/'
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-    }
-
-    // convenience getter for easy access to form fields
-    get f() {
-        return this.loginForm.controls;
     }
 
     onSubmit() {

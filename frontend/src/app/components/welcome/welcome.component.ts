@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {WelcomeDataService} from 'src/app/_services';
 
 @Component({
     selector: 'app-welcome',

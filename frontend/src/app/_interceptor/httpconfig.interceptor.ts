@@ -1,10 +1,5 @@
 import {Injectable} from '@angular/core';
-import {
-    HttpInterceptor,
-    HttpRequest,
-    HttpHandler,
-    HttpEvent,
-} from '@angular/common/http';
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest,} from '@angular/common/http';
 
 import {Observable} from 'rxjs';
 import {AuthenticationService} from "../_services";
@@ -32,22 +27,8 @@ export class HttpConfigInterceptor implements HttpInterceptor {
             return next.handle(request)
         }
 
-
-        /*
-                if((this.authenticationService.username.length == 0) ||
-                    (this.authenticationService.password.length == 0)) {
-
-                    console.log("without interception");
-                    return next.handle(request)
-                }
-        */
-
         console.log("in interception");
 
-        /*
-                console.log('Basic ' + btoa(this.authenticationService.username + ':'
-                    + this.authenticationService.password));
-        */
         request = request.clone({
             headers: request.headers.set('Authorization', 'Basic '
                 + btoa(this.authenticationService.username + ':' + this.authenticationService.password))

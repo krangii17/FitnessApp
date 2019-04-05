@@ -1,8 +1,9 @@
 .active td {
-    background-color:#123456 !important;
+    background-color: #123456 !important;
     color: white;
 }
-table{
+
+table {
     width: 80%;
     margin: auto;
 }

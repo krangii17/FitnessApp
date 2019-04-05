@@ -7,8 +7,9 @@ import {User} from 'src/app/_models';
 @Injectable({providedIn: 'root'})
 export class AuthenticationService {
 
-    private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
+    private currentUserSubject: BehaviorSubject<User>;
+
     constructor(private http: HttpClient) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
@@ -31,12 +32,6 @@ export class AuthenticationService {
 
     private _password: String;
 
-    logout() {
-        // remove user from local storage to log user out
-        localStorage.removeItem('currentUser');
-        this.currentUserSubject.next(null);
-    }
-
     get password(): String {
         return this._password;
     }
@@ -55,10 +50,13 @@ export class AuthenticationService {
         this._userLoggedIn = value;
     }
 
+    logout() {
+        // remove user from local storage to log user out
+        localStorage.removeItem('currentUser');
+        this.currentUserSubject.next(null);
+    }
+
     login() {
-
-
-        // return this.http.get(`http://localhost:8080/login`, {headers: headers, responseType: 'text'});
         return this.http.get(`http://localhost:8080/login`, {responseType: 'text'});
     }
 }

@@ -1,20 +1,20 @@
-import { Component, Input  } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-coach',
-  templateUrl: './coach.component.html',
-  styleUrls: ['./coach.component.css']
+    selector: 'app-coach',
+    templateUrl: './coach.component.html',
+    styleUrls: ['./coach.component.css']
 })
 export class CoachComponent {
 
-  isChecked = false;
+    isChecked = false;
 
-  @Input() coachComponent;
+    @Input() coachComponent;
 
-  onClick() {
-    this.isChecked = !this.isChecked;
-    console.log(this.isChecked);
+    onClick() {
+        this.isChecked = !this.isChecked;
+        console.log(this.isChecked);
 
-  }
+    }
 
 }

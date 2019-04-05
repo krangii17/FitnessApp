@@ -1,24 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CoachService} from "../../_services";
 import {first} from "rxjs/operators";
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+    selector: 'app-search',
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
 
-  users = [];
-  searchStr = '';
+    users = [];
+    searchStr = '';
 
-  constructor(private coachService: CoachService) {}
+    constructor(private coachService: CoachService) {
+    }
 
-  ngOnInit() {
-    this.coachService.getUsers()
-        .pipe(first()).subscribe( data => {
-      this.users = data;
-    });
-  }
+    ngOnInit() {
+        this.coachService.getUsers()
+            .pipe(first()).subscribe(data => {
+            this.users = data;
+        });
+    }
 
 }

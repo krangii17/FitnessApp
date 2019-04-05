@@ -27,9 +27,10 @@ export class UserService {
         let headers = new HttpHeaders({
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded',
-            'No-Auth': 'True'});
+            'No-Auth': 'True'
+        });
 
-        let options = { headers: headers};
+        let options = {headers: headers};
         return this.http.post(`http://localhost:8080/changePassword`, body.toString(), options);
     }
 
@@ -47,9 +48,10 @@ export class UserService {
         let headers = new HttpHeaders({
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded',
-            'No-Auth': 'True'});
+            'No-Auth': 'True'
+        });
 
-        let options = { headers: headers};
+        let options = {headers: headers};
         return this.http.post(`http://localhost:8080/sign_up`, body.toString(),
             {headers: headers, responseType: 'text'});
     }

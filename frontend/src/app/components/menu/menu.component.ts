@@ -12,6 +12,7 @@ export class MenuComponent implements OnInit {
 
     constructor(private loginService: HardcodedAuthenticationService) {
     }
+
     get f() {
         return this.isUserLoggedIn;
     }

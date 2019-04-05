@@ -29,8 +29,8 @@
     <div class="form-group">
         <label for="secretQuestion">Secret Question</label>
         <input type="text" formControlName="secretQuestion" class="form-control  col-md-5  bg-white py-2 m-auto"
-        [ngClass]="{ 'is-invalid': submitted && f.secretQuestion.errors }"/>
-        <div *ngIf="submitted && f.secretQuestion.errors" class="invalid-feedback">   
+               [ngClass]="{ 'is-invalid': submitted && f.secretQuestion.errors }"/>
+        <div *ngIf="submitted && f.secretQuestion.errors" class="invalid-feedback">
             <div *ngIf="f.secretQuestion.errors.required">Secret question is required</div>
             <div *ngIf="!f.secretQuestion.required">For example: Your mother's maiden name</div>
         </div>
@@ -38,8 +38,8 @@
     <div class="form-group">
         <label for="secretAnswer">Secret Answer</label>
         <input type="text" formControlName="secretAnswer" class="form-control  col-md-5  bg-white py-2 m-auto"
-        [ngClass]="{ 'is-invalid': submitted && f.secretAnswer.errors }"/>
-        <div *ngIf="submitted && f.secretAnswer.errors" class="invalid-feedback">   
+               [ngClass]="{ 'is-invalid': submitted && f.secretAnswer.errors }"/>
+        <div *ngIf="submitted && f.secretAnswer.errors" class="invalid-feedback">
             <div *ngIf="f.secretAnswer.errors.required">Your answer of your question is required</div>
         </div>
     </div>
