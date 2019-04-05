@@ -1,0 +1,21 @@
+
+<div class="col xl3" >
+  <div class="card" style="width: 15rem;">
+    <div class="card-image">
+      <img src="{{ coachComponent.image }}">
+      <span
+              class="card-title"
+              [ngClass] = "{'checked': isChecked}"
+      >{{ coachComponent.name | uppercase }}</span>
+    </div>
+    <div class="card-content">
+      <p>{{ coachComponent.phone }}</p>
+      <p>{{ coachComponent.email }}</p>
+    </div>
+    <div class="card-action">
+      <a
+              (click)="onClick()"
+              class="waves-effect waves-light btn">check</a>
+    </div>
+  </div>
+</div>

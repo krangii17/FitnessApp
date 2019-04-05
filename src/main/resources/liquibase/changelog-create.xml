@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="1-create_exercise_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="exercise">
+            <column name="ex_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(400)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="exercise_effectiveness" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="exercise_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="training_id" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2-create_goal_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="goal">
+            <column name="goal_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="goal_title" type="VARCHAR(400)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="3-create_group_of_muscles_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="group_of_muscles">
+            <column name="group_of_muscles_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="group_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ex_id" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="4-create_program_template_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="program_template">
+            <column name="program_template_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="is_base_program" type="BIT DEFAULT 1">
+                <constraints nullable="true"/>
+            </column>
+            <column name="num_of_train" type="INT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="number_of_days" type="INT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="percent_of_maximum" type="INT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="program_name" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="sets" type="INT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="reps" type="INT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="exercise_id" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="goal_id" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="5-create_restrictions_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="restrictions">
+            <column name="rest_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="evaluation" type="INT">
+                <constraints nullable="true"/>
+            </column>
+            <column name="restriction_name" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="state" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="ex_id" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="6-create_schedule_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="schedule">
+            <column name="schedule_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="purpose" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="7-create_schedule_id_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="schedule_id">
+            <column name="user_parameters_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="schedule_schedule_id" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="8-create_training_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="training">
+            <column name="train_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="iteration" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="projectile_weight" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="time" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="schedule_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="9-create_user_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="user">
+            <column name="user_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="secret_answer" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="secret_question" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="username" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="10-create_user_parameters_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="user_parameters">
+            <column name="user_parameters_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="birth_date" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gender" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="height" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="telephone" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="train_day_quantity" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="weight" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="11-create_user_program_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="user_program">
+            <column name="id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="begin_date" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="program_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="program_over" type="BIT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="12-create_users_parameters_restrictions_table" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="users_parameters_restrictions">
+            <column name="user_parameter_ID"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="restriction_ID" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="13-create_user_start_param" author="ivko">
+        <validCheckSum>7:c21cd4b75b35b196dc8fdf82cacbb405</validCheckSum>
+        <createTable tableName="user_start_parameters">
+            <column name="user_start_param_id"
+                    type="BIGINT"
+                    autoIncrement="true"
+                    startWith="1">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="init_weight" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="exercise_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="program_template_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="tag-create" author="ivko">
+        <tagDatabase tag="create"/>
+    </changeSet>
+</databaseChangeLog>

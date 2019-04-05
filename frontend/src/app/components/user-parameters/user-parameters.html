@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter your parameters here</title>
+</head>
+<body class="bg-white">
+<div class="container">
+    <div class="py-5 text-center">
+        <img alt="..." class="card-image" src="https://randomuser.me/api/portraits/men/68.jpg">
+        <h2>Your personal parameters</h2>
+        <p class="lead">Before you make a training program, you must enter your personal parameters.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="mb-3">Restrictions with evaluations </h4>
+            <ul class="list-group mb-3">
+                <li *ngFor="let userRestriction of restrictions"
+                    class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="custom-control custom-switch mb-14">
+                        <input [(ngModel)]="userRestriction.userSelect" class="custom-control-input"
+                               id={{userRestriction.restrictionName}} type="checkbox">
+                        <label class="custom-control-label"
+                               for={{userRestriction.restrictionName}}>{{userRestriction.restrictionName}}</label>
+                    </div>
+                    <span class="text-muted">
+                        <input #evaluation="ngModel" [(ngModel)]="userRestriction.evaluation"
+                               [hidden]="!userRestriction.userSelect" class="form-control"
+                               id={{userRestriction.restrictionName}}+input
+                               max="9" min="0"
+                               pattern="[0-9]{1}" required type="number"/>
+                        <div [hidden]="evaluation.valid || evaluation.untouched" class="alert alert-danger">
+                            Valid number of evaluation is required.
+                        </div>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">General information</h4>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input #firstName="ngModel" [(ngModel)]="userParameters.firstName" class="form-control"
+                               id="firstName"
+                               required type="text"/>
+                        <div [hidden]="firstName.valid || firstName.untouched" class="alert alert-danger">
+                            Valid first name is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-5 mb-3">
+                    <label for="lastName">Last name</label>
+                    <input #lastName="ngModel" [(ngModel)]="userParameters.lastName" class="form-control" id="lastName"
+                           required type="text"/>
+                    <div [hidden]="lastName.valid || lastName.untouched" class="alert alert-danger">
+                        Valid last name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="username">Username</label>
+                <div class="input-group">
+                    <input #username="ngModel" [(ngModel)]="userParameters.username" class="form-control" id="username"
+                           required type="text"/>
+                    <div [hidden]="username.valid || username.untouched" class="alert alert-danger">
+                        Valid user name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="birthDate">Birthday date</label>
+                    <input #birthDate="ngModel" [(ngModel)]="userParameters.birthDate" class="form-control"
+                           id="birthDate"
+                           required type="date"/>
+                    <div [hidden]="birthDate.valid || birthDate.untouched" class="alert alert-danger">
+                        Valid birthday is required.
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3">
+                    <label for="gender">Gender</label>
+                    <select #gender="ngModel" [(ngModel)]="userParameters.gender" class="custom-select d-block w-100"
+                            id="gender" required>
+                        <option>MALE</option>
+                        <option>FEMALE</option>
+                    </select>
+                    <div [hidden]="gender.valid || gender.untouched" class="alert alert-danger">
+                        Valid gender is required.
+                    </div>
+                </div>
+            </div>
+
+
+            <h4 class="mb-3">Contact information</h4>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                    <input #email="ngModel" [(ngModel)]="userParameters.email" class="form-control" email
+                           id="email" required type="email"/>
+                    <div [hidden]="email.valid || email.untouched" class="alert alert-danger">
+                        Valid email is required.
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="telephone">Phone number</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">+380</span>
+                            <input #telephone="ngModel" [(ngModel)]="userParameters.telephone" class="form-control"
+                                   id="telephone"
+                                   pattern="[0-9]{9}" required type="tel"/>
+                            <div [hidden]="telephone.valid || telephone.untouched" class="alert alert-danger">
+                                Valid phone number is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="mb-3">Training information</h4>
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                    <label for="weight">Weight</label>
+                    <input #weight="ngModel" [(ngModel)]="userParameters.weight" class="form-control" id="weight"
+                           pattern="[0-9]{2,3}" required type="number"/>
+                    <div [hidden]="weight.valid || weight.untouched" class="alert alert-danger">
+                        Valid weight is required.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="height">Height</label>
+                    <input #height="ngModel" [(ngModel)]="userParameters.height" class="form-control" id="height"
+                           pattern="[0-9]{2,3}" required type="number"/>
+                    <div [hidden]="height.valid || height.untouched" class="alert alert-danger">
+                        Valid height is required.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="trainDayQuantity">Training days</label>
+                    <input #trainDayQuantity="ngModel" [(ngModel)]="userParameters.trainDayQuantity"
+                           class="form-control" id="trainDayQuantity"
+                           pattern="[1-7]{1}" required type="number"/>
+                    <div [hidden]="trainDayQuantity.valid || trainDayQuantity.untouched" class="alert alert-danger">
+                        Valid number of training days is required.
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+            <button (click)="onSubmit()"
+                    [disabled]="firstName.invalid || lastName.invalid || username.invalid
+             || birthDate.invalid || gender.invalid || email.invalid
+             || telephone.invalid || weight.invalid || height.invalid
+             || trainDayQuantity.invalid" class="btn btn-primary btn-lg btn-block" type="submit">Update
+            </button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

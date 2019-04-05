@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="Create/Update tables" author="ivko" runOnChange="true">
+        <sql splitStatements="true">
+            <!--DROP TABLE DATABASECHANGELOG CASCADE;-->
+            <!--DROP TABLE DATABASECHANGELOGLOCK CASCADE;-->
+            DROP TABLE IF EXISTS exercise CASCADE;
+            DROP TABLE IF EXISTS goal CASCADE;
+            DROP TABLE IF EXISTS group_of_muscles CASCADE;
+            DROP TABLE IF EXISTS program_template CASCADE;
+            DROP TABLE IF EXISTS restrictions CASCADE;
+            DROP TABLE IF EXISTS schedule CASCADE;
+            DROP TABLE IF EXISTS schedule_id CASCADE;
+            DROP TABLE IF EXISTS training CASCADE;
+            DROP TABLE IF EXISTS user CASCADE;
+            DROP TABLE IF EXISTS user_parameters CASCADE;
+            DROP TABLE IF EXISTS user_program CASCADE;
+            DROP TABLE IF EXISTS users_parameters_restrictions CASCADE;
+            DROP TABLE IF EXISTS user_start_parameters CASCADE;
+        </sql>
+    </changeSet>
+
+    <changeSet id="tag-drop-all" author="ivko">
+        <tagDatabase tag="drop-all"/>
+    </changeSet>
+</databaseChangeLog>

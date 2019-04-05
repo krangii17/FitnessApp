@@ -1,0 +1,26 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div>
+            <ul class="navbar-brand">Fitness Application</ul>
+        </div>
+
+        <button class="btn btn-success" routerLink="/registration">Register</button>
+        &nbsp; &nbsp; &nbsp;
+        <button class="btn btn-success" routerLink="/recovery">Recovery Password</button>
+        &nbsp; &nbsp; &nbsp;
+        <button class="btn btn-success" routerLink="/profile">User profile</button>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li>
+                <a *ngIf="!f" class="navbar-link" routerLink="/login">
+                    Login
+                </a>
+            </li>
+            <li>
+                <a *ngIf="f" class="navbar-link" routerLink="/logout">
+                    LogOut
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>

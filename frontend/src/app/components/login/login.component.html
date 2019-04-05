@@ -1,0 +1,41 @@
+<body class="bg-light">
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form-1">
+            <h3>Welcome to "FitnessApp"</h3>
+            <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                <div class="form-group">
+                    <label for="username">Login</label>
+                    <input class="form-control" formControlName="username" id="username"
+                           placeholder="Your Email *" type="email"/>
+                    <div *ngIf="loginForm.controls['username'].invalid && loginForm.controls['username'].touched"
+                         class="alert alert-danger">
+                        Please enter a valid email address.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input autocomplete="off" class="form-control " formControlName="password" id="password"
+                           placeholder="Your Password *" type="password"/>
+                    <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"
+                         class="alert alert-danger">
+                        Please enter a valid password.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!--<input type="submit" class="btnSubmit" value="Login" button [disabled]="loginForm.invalid" />-->
+                    <button [disabled]="loginForm.invalid" class="btn btn-primary">
+                        Login
+                    </button>
+                </div>
+                <div class="form-group">
+                    <a class="ForgetPwd" href="/recovery">Forgot Password?</a>
+                </div>
+                <div *ngIf="error!= null" class="alert alert-danger">
+                    <p>Incorrect email or password</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>

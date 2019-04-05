@@ -1,0 +1,202 @@
+1.  Hibernate: create table exercise (
+                ex_id bigint not null auto_increment,
+                description varchar(400),
+                exercise_effectiveness integer,
+                exercise_name varchar(255),
+                training_id bigint,
+                primary key (ex_id))
+                engine=MyISAM
+2.  Hibernate: create table goal (
+                goal_id bigint not null auto_increment,
+                goal_title varchar(255),
+                primary key (goal_id))
+                engine=MyISAM
+3.  Hibernate: create table group_of_muscles (
+                group_of_muscles_id bigint not null auto_increment,
+                group_name varchar(255),
+                ex_id bigint,
+                primary key (groupOfMuscles_id))
+                engine=MyISAM
+4.  Hibernate: create table program_template (
+                id bigint not null auto_increment,
+                is_base_program bit,
+                num_of_train integer,
+                number_of_days integer,
+                percent_of_maximum integer,
+                program_name varchar(255),
+                sets integer,
+                exercise_id bigint,
+                goal_id bigint,
+                user_id bigint,
+                primary key (id))
+                engine=MyISAM
+5.  Hibernate: create table restrictions (
+                rest_id bigint not null auto_increment,
+                evaluation integer,
+                restriction_name varchar(255),
+                state varchar(255),
+                ex_id bigint,
+                primary key (rest_id))
+                engine=MyISAM
+6.  Hibernate: create table schedule (
+                schedule_id bigint not null auto_increment,
+                purpose varchar(255),
+                primary key (schedule_id))
+                engine=MyISAM
+7.  Hibernate: create table schedule_id (
+                schedule_schedule_id bigint,
+                user_parameters_id bigint not null,
+                primary key (user_parameters_id))
+                engine=MyISAM
+8.  Hibernate: create table training (
+                train_id bigint not null auto_increment,
+                iteration integer,
+                projectile_weight integer,
+                time integer,
+                schedule_id bigint,
+                primary key (train_id))
+                engine=MyISAM
+9.  Hibernate: create table user (
+                user_id bigint not null auto_increment,
+                email varchar(255),
+                password varchar(255),
+                role varchar(255),
+                secret_answer varchar(255),
+                secret_question varchar(255),
+                state varchar(255),
+                username varchar(255),
+                primary key (user_id))
+                engine=MyISAM
+10. Hibernate: create table user_parameters (
+                user_parameters_id bigint not null,
+                birth_date date not null,
+                first_name varchar(255),
+                gender varchar(255) not null,
+                height integer not null,
+                last_name varchar(255),
+                telephone varchar(255),
+                train_day_quantity integer not null,
+                weight integer not null,
+                user_id bigint not null,
+                primary key (user_parameters_id))
+                engine=MyISAM
+11. Hibernate: create table user_program (
+                id bigint not null auto_increment,
+                begin_date date not null,
+                program_name varchar(255) not null,
+                program_over bit not null,
+                user_id bigint not null,
+                primary key (id))
+                engine=MyISAM
+12. Hibernate: create table users_parameters_restrictions (
+                user_parameter_ID bigint not null,
+                restriction_ID bigint not null,
+                primary key (user_parameter_ID,
+                restriction_ID))
+                engine=MyISAM
+
+
+1.   Hibernate: alter table exercise
+                add constraint
+                FKdgf11138wea34dd612056iuds
+                foreign key
+                (training_id)
+                references
+                training
+                (train_id)
+2.   Hibernate: alter table group_of_muscles
+                add constraint
+                FKbp3evibjl7m43mmybgpelwsql
+                foreign key
+                (ex_id)
+                references
+                exercise
+                (ex_id)
+3.   Hibernate: alter table programTemplate
+                add constraint
+                FKb098528i3hh67hyh37fo9uxrt
+                foreign key
+                (exercise_id)
+                references
+                exercise
+                (ex_id)
+4.   Hibernate: alter table programTemplate
+                add constraint
+                FKjb0xg9qli2y8tcdi329gx6ave
+                foreign key
+                (goal_id)
+                references
+                goal
+                (goal_id)
+5.   Hibernate: alter table programTemplate
+                add constraint
+                FKp9iv4t7yij57al0ehtvbstiyc
+                foreign key
+                (user_id)
+                references
+                user
+                (user_id)
+6.   Hibernate: alter table restrictions
+                add constraint
+                FKbhipgebfq34528rapa5xko5bi
+                foreign key
+                (ex_id)
+                references
+                exercise
+                (ex_id)
+7.   Hibernate: alter table schedule_id
+                add constraint
+                FKldk7d224vkjxpscota7lrtknh
+                foreign key
+                (schedule_schedule_id)
+                references
+                schedule
+                (schedule_id)
+8.   Hibernate: alter table schedule_id
+                add constraint
+                FKkaa146ofjwc2hv2xtrc0yj44
+                foreign key
+                (user_parameters_id)
+                references
+                user_parameters
+                (user_parameters_id)
+9.   Hibernate: alter table training
+                add constraint
+                FKsh309if5waqsxfyxi31ax4gin
+                foreign key
+                (schedule_id)
+                references
+                schedule
+                (schedule_id)
+10.  Hibernate: alter table user_parameters
+                add constraint
+                FKptv7tsd3cy1a7tj0rct7gaoq3
+                foreign key
+                (user_id)
+                references
+                user
+                (user_id)
+11.  Hibernate: alter table user_program
+                add constraint
+                FKj0gfrrt70n7nuonltud91h97w
+                foreign key
+                (user_id)
+                references
+                user
+                (user_id)
+12.  Hibernate: alter table users_parameters_restrictions
+                add constraint
+                FKbctyj8gyout5ixnr5uy6idncf
+                foreign key
+                (restriction_ID)
+                references
+                restrictions
+                (rest_id)
+13.  Hibernate: alter table users_parameters_restrictions
+                add constraint
+                FKr571g0mhi1sr18nm7yni11of8
+                foreign key
+                (user_parameter_ID)
+                references
+                user_parameters
+                (user_parameters_id)

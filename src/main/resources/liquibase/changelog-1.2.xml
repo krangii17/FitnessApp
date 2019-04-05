@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="3" author="ivko">
+        <validCheckSum>7:391d9e4213facaddddbb59631acc0162</validCheckSum>
+        <insert tableName="restrictions">
+            <column name="restriction_name"
+                    value="Лучезапястный"/>
+        </insert>
+        <insert tableName="restrictions">
+            <column name="restriction_name"
+                    value="Локтевой"/>
+        </insert>
+        <insert tableName="restrictions">
+            <column name="restriction_name"
+                    value="Плечевой"/>
+        </insert>
+        <insert tableName="restrictions">
+            <column name="restriction_name"
+                    value="Спина"/>
+        </insert>
+        <insert tableName="restrictions">
+            <column name="restriction_name"
+                    value="Тазобедренный"/>
+        </insert>
+        <insert tableName="restrictions">
+            <column name="restriction_name"
+                    value="Коленный"/>
+        </insert>
+        <insert tableName="restrictions">
+            <column name="restriction_name"
+                    value="Голеностоп"/>
+        </insert>
+        <rollback/>
+    </changeSet>
+
+    <changeSet id="tag-1.2" author="ivko">
+        <tagDatabase tag="1.2"/>
+    </changeSet>
+</databaseChangeLog>

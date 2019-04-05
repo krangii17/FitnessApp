@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="add-program-template-in-program-template" author="lytvynenko">
+        <validCheckSum>7:391d9e4213facaddddbb59631acc0162</validCheckSum>
+
+        <!--=========================================== 1 день ===========================================-->
+        <insert tableName="program_template">
+            <column name="num_of_train" value="1"/>
+            <column name="exercise_id" value="81"/>
+            <column name="percent_of_maximum" value="68"/>
+            <column name="sets" value="4"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="1"/>
+            <column name="exercise_id" value="26"/>
+            <column name="percent_of_maximum" value="45"/>
+            <column name="sets" value="3"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="1"/>
+            <column name="exercise_id" value="80"/>
+            <column name="percent_of_maximum" value="50"/>
+            <column name="sets" value="4"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="1"/>
+            <column name="exercise_id" value="29"/>
+            <column name="percent_of_maximum" value="45"/>
+            <column name="sets" value="3"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="1"/>
+            <column name="exercise_id" value="51"/>
+            <column name="percent_of_maximum" value="55"/>
+            <column name="sets" value="2"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+        <!--=========================================== 2 день ===========================================-->
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="2"/>
+            <column name="exercise_id" value="18"/>
+            <column name="percent_of_maximum" value="55"/>
+            <column name="sets" value="5"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="2"/>
+            <column name="exercise_id" value="26"/>
+            <column name="percent_of_maximum" value="48"/>
+            <column name="sets" value="3"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="2"/>
+            <column name="exercise_id" value="19"/>
+            <column name="percent_of_maximum" value="65"/>
+            <column name="sets" value="4"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="2"/>
+            <column name="exercise_id" value="69"/>
+            <column name="percent_of_maximum" value="47"/>
+            <column name="sets" value="3"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <!--=========================================== 3 день ===========================================-->
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="3"/>
+            <column name="exercise_id" value="81"/>
+            <column name="percent_of_maximum" value="45"/>
+            <column name="sets" value="3"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="3"/>
+            <column name="exercise_id" value="26"/>
+            <column name="percent_of_maximum" value="68"/>
+            <column name="sets" value="4"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="3"/>
+            <column name="exercise_id" value="82"/>
+            <column name="percent_of_maximum" value="40"/>
+            <column name="sets" value="4"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="3"/>
+            <column name="exercise_id" value="29"/>
+            <column name="percent_of_maximum" value="54"/>
+            <column name="sets" value="3"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="program_template">
+            <column name="num_of_train" value="3"/>
+            <column name="exercise_id" value="85"/>
+            <column name="percent_of_maximum" value="70"/>
+            <column name="sets" value="3"/>
+            <column name="reps" value="4"/>
+            <column name="program_name" value="базовая программа на увеличение силы"/>
+            <column name="goal_id" value="1"/>
+            <column name="number_of_days" value="3"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <rollback/>
+    </changeSet>
+
+    <changeSet id="tag-add-program-template" author="lytvynenko">
+        <tagDatabase tag="add-program-template"/>
+    </changeSet>
+</databaseChangeLog>

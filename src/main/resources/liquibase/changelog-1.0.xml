@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet id="1" author="ivko">
+        <validCheckSum>7:391d9e4213facaddddbb59631acc0162</validCheckSum>
+        <insert tableName="exercise">
+            <column name="ex_id" value="1"/>
+            <column name="exercise_effectiveness" value="7"/>
+            <column name="description"
+                    value="Это упражнение требует определенной физической силы и прекрасно подходит для развития широчайшей мышцы спины, большой круглой мышцы и, в момент сведения лопаток в конце подтягивания, ромбовидных мышц."/>
+            <column name="exercise_name" value="Подтягивания на специальной перекладине"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="2"/>
+            <column name="exercise_effectiveness" value="7"/>
+            <column name="description"
+                    value="Это движение развивает широчайшую мышцу и большую круглую мышцу спины. Его усилия распространяются также на бицепсы и плечевые мышцы."/>
+            <column name="exercise_name" value="Подтягивания на перекладине хватом снизу"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="3"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение наращивает ширину спины, задействует трапециевидную мышцу, ромбовидные мышцы, бицепсы и плечевые мышцы."/>
+            <column name="exercise_name" value="Тяги верхнего блока перед собой"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="4"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение превосходно развивает ширину спины, ее верхние и нижние пучки, а также большие круглые мышцы."/>
+            <column name="exercise_name" value="Тяги верхнего блока за шею"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="5"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это превосходное упражнение для полного развития широчайшей мышцы спины и большой круглой мышцы. При сведении лопаток задействуются ромбовидная и трапециевидная мышцы, а также задние части дельтовидной мышцы."/>
+            <column name="exercise_name" value="Тяги верхнего блока узким хватом"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="6"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Упражнение для проработки мышц спины. Оно отлично нагружает широчайшие мышцы спины, включает в работу нижнюю часть трапециевидных мышц, задействует круглые и ромбовидные мышцы спины, а также заднюю дельту, бицепс и предплечья."/>
+            <column name="exercise_name" value="Тяга сверху в вертикальном тренажере"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="7"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение также задействует широчайшие и круглые мышцы спины. Пловцы часто используют это упражнение как силовое, позволяющее им получать хорошие результаты в стиле кроль"/>
+            <column name="exercise_name" value="Тяги верхнего блока прямыми руками"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="8"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение превосходно формирует толщину спины, задействуя широчайшую мышцу спины, большую круглую мышцу, задние части дельтовидных мышц."/>
+            <column name="exercise_name" value="Тяги нижнего блока (гребля)"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="9"/>
+            <column name="exercise_effectiveness" value="6"/>
+            <column name="description"
+                    value="Это упражнение преимущественно нагружает широчайшие мышцы спины, большую круглую мышцу, заднюю часть дельтовидных мышц, а также трапециевидную и ромбовидную мышцы в конечной фазе движения."/>
+            <column name="exercise_name" value="Тяги гантели одной рукой"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="10"/>
+            <column name="exercise_effectiveness" value="8"/>
+            <column name="description"
+                    value="Это упражнение задействует широчайшие мышцы спины, большие круглые мышцы, задние части дельтовидных мышц, сгибатели руки, а при сведении лопаток друг с другом - ромбовидные и трапециевидные мышцы."/>
+            <column name="exercise_name" value="Тяги штанги, стоя в наклоне"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="11"/>
+            <column name="exercise_effectiveness" value="8"/>
+            <column name="description"
+                    value="Это упражнение в первую очередь нагружает широчайшие мышцы спины, большую круглую мышцу, заднюю часть дельтовидных мышц."/>
+            <column name="exercise_name" value="Тяга гантелей в наклоне"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="12"/>
+            <column name="exercise_effectiveness" value="6"/>
+            <column name="description"
+                    value="Это упражнение концентрирует нагрузку на мышцах спины, не требуя значительных усилий для сохранения правильного положения тела."/>
+            <column name="exercise_name" value="Тяги Т-образного грифа (гребля)"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="13"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это базовое упражнение превосходно прорабатывает широчайшие мышцы спины.
+Подходит как для новичков так и для опытных спортсменов. Хорошо прорабатывает технику выполнения тяговых упражнений, так как движение происходит по заданной траектории тренажера."/>
+            <column name="exercise_name" value="Тяга в Горизонтальном Тренажере"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="14"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение разрабатывает трапециевидные мышцы, главным образом их верхнюю часть, а также дельтовидные мышцы, мышцы, поднимающие лопатку."/>
+            <column name="exercise_name" value="Вертикальные тяги"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="15"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение развивает верхнюю часть трапециевидной мышцы, главным образом ее затылочно-ключичные пучки, а также лопаточную."/>
+            <column name="exercise_name" value="Шраги со штангой"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="16"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение предназначено для разработки верхних, или ключичных, частей трапециевидных мышц, мышц, поднимающих лопатку, средних частей трапециевидных мышц и ромбовидных мышц, если дополнить поднимание плеч смыканием лопаток."/>
+            <column name="exercise_name" value="Шраги с гантелями"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="17"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение при систематическом использовании превосходно подходит для развития верхних частей трапециевидных мышц и мышц, поднимающих лопатки."/>
+            <column name="exercise_name" value="Шраги на тренажере"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="18"/>
+            <column name="exercise_effectiveness" value="12"/>
+            <column name="description"
+                    value="Это упражнение вовлекает в работу ягодичные и четырехглавые мышцы бедра, при этом разрабатывая позвоночно-крестцовые и трапециевидные мышцы."/>
+            <column name="exercise_name" value="Становые тяги со штангой"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="19"/>
+            <column name="exercise_effectiveness" value="9"/>
+            <column name="description"
+                    value="Это упражнение развивает главным образом мышцы, разгибающие позвоночник."/>
+            <column name="exercise_name" value="Поясничные прогибания"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="20"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение разрабатывает мышцы, выпрямляющие позвоночник, локализуя нагрузку в нижней части спины, прежде всего - на крестцово-поясничной группе остистых мышц."/>
+            <column name="exercise_name" value="Разгибания туловища на тренажере"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="21"/>
+            <column name="exercise_effectiveness" value="8"/>
+            <column name="description"
+                    value="Это упражнение задействует ключичный отдел большой грудной мышцы, передние части дельтовидных мышц; трицепсы, переднюю зубчатую и малую грудную мышцы."/>
+            <column name="exercise_name" value="Жим штанги, лежа на наклонной скамье"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="22"/>
+            <column name="exercise_effectiveness" value="8"/>
+            <column name="description"
+                    value="Это упражнение является как бы промежуточным упражнением между жимом штанги, лежа на наклонной скамье, и разведением гантелей на наклонной скамье и задействует прежде всего ключичные части грудных мышц."/>
+            <column name="exercise_name" value="Жим гантелей, лежа на наклонной скамье"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="23"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение локализует усилие главным образом на верхние части большой грудной мышцы. Наряду с протяжкой гантели или штанги (pull-over) это упражнение является базовым для увеличения грудной клетки."/>
+            <column name="exercise_name" value="Разведение гантелей, лежа на наклонной скамье"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="24"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение превосходно развивает верхнюю часть большой грудной мышцы. Так же задействует передние дельтовидные мышцы плеч."/>
+            <column name="exercise_name" value="Кроссоверы верхних блоков для верха груди"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="25"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение отлично подойдет для проработки верхних мышечных волокон грудных мышц. Также в работу включаются передние дельты и трицепс.
+Идеально подходит для спортсменов начального уровня подготовки."/>
+            <column name="exercise_name" value="Жим в тренажере для верха груди"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="26"/>
+            <column name="exercise_effectiveness" value="11"/>
+            <column name="description"
+                    value="Это упражнение развивает всю большую грудную мышцу, малую грудную мышцу, трицепсы, переднюю часть дельтовидной мышцы, зубчатые и клювовидно-плечевые мышцы."/>
+            <column name="exercise_name" value="Жим штанги, лежа на горизонтальной скамье"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="27"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="В положении лицом вниз, упираясь прямыми руками в пол, ладони на ширине плеч или чуть шире. Ноги вместе или слегка расставлены."/>
+            <column name="exercise_name" value="Отжимания от пола"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="28"/>
+            <column name="exercise_effectiveness" value="2"/>
+            <column name="description"
+                    value="Упражнение хорошо подойдет тем, кто только начинает заниматься спортом и не имеем возможности выполнять более сложные упражнения."/>
+            <column name="exercise_name" value="Отжимания от пола с колен для груди"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="29"/>
+            <column name="exercise_effectiveness" value="9"/>
+            <column name="description"
+                    value="Это упражнение аналогично жиму штанги лежа, за исключением того, что упражнение с гантелями характеризуется большей амплитудой, способствующей лучшему растягиванию больших грудных мышц."/>
+            <column name="exercise_name" value="Жим гантелей лежа"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="30"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это базовое упражнение для увеличения объема груди и способствует увеличению объема легких. Кроме того, оно придает эластичность мышцам."/>
+            <column name="exercise_name" value="Разведение гантелей лежа"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="31"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Упражнение великолепно расширяет грудную клетку. Выполняя его, используйте нагрузки с легким весом и следите за положением туловища и правильным дыханием."/>
+            <column name="exercise_name" value="Тяга штанги лежа PULL-OVER"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="32"/>
+            <column name="exercise_effectiveness" value="8"/>
+            <column name="description"
+                    value="Это упражнение формирует нижний подрез грудных мышц. Кроме того, при опускании грифа штанги к шее растягивается большая грудная мышца, что способствует увеличению ее эластичности."/>
+            <column name="exercise_name" value="Жим штанги, лежа на скамье с уклоном"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="33"/>
+            <column name="exercise_effectiveness" value="8"/>
+            <column name="description"
+                    value="Это упражнение прекрасно растягивает большие грудные мышцы и повышает эластичность мышц плечевого пояса."/>
+            <column name="exercise_name" value="Отжимания на брусьях"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="34"/>
+            <column name="exercise_effectiveness" value="8"/>
+            <column name="description"
+                    value="Это упражнение великолепно подходит для развития внутренней прорисовки грудной мышцы и трицепсов."/>
+            <column name="exercise_name" value="Жим штанги узким хватом, лежа на скамье"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="35"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение разрабатывает большие грудные мышцы. Во время сведения локтей оно локализует усилие на уровне внутренней части мышц груди, также разрабатывая клювовидно-плечевые мышцы и короткую головку бицепсов."/>
+            <column name="exercise_name" value="Сведение рук на тренажере"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="36"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение превосходно развивает большую грудную мышцу. Меняя угол наклона туловища и траекторию движения рук, то есть, сближая руки на различном по высоте уровне можно задействовать все части большой грудной мышцы."/>
+            <column name="exercise_name" value="Сведение верхних блоков CROSS-OVER"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="37"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение развивает внутреннюю часть большой грудной мышцы, длинную головку трицепсов, большую круглую мышцу, широчайшую мышцу спины, а также переднюю зубчатую, ромбовидную и малую грудную мышцы."/>
+            <column name="exercise_name" value="Тяга гантели из-за головы лежа PULL-OVER"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="38"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это одно из лучших упражнений для мышц бицепса. Положение лежа хорошо помогает изолировать нагрузку четко на бицепсах."/>
+            <column name="exercise_name" value="Сгибание рук лежа с нижнего блока"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="39"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="В упражнении участвуют мышцы: плечелучевая, плечевая, двуглавая (бицепс), передняя дельтовидная, в меньшей степени клювовидно-плечевая и верхний отдел большой грудной мышцы."/>
+            <column name="exercise_name" value="Попеременные сгибания рук с гантелями"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="40"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение позволит вам контролировать амплитуду, скорость и размерность движений. Оно предназначено главным образом для работы бицепсов и плечевых мышц."/>
+            <column name="exercise_name" value="Концентрированное сгибание одной руки с гантелью"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="41"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Упражнение сгибание рук лежа на скамье предназначено для проработки мышц бицепса. Так же в работу включаются передние дельты плеч, немного грудные и мышцы предплечья."/>
+            <column name="exercise_name" value="Сгибание рук лежа с верхнего блока"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="42"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это лучшее упражнение для плечелучевых мышц. В нем также участвуют бицепс и частично плечевая мышца и в меньшей степени короткий и длинный лучевые разгибатели запястья."/>
+            <column name="exercise_name" value="Сгибание рук с гантелями хватом молоток"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="43"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это хорошее упражнение для изолированной накачки бицепсов."/>
+            <column name="exercise_name" value="Сгибание одной руки с рукояткой нижнего блока"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="44"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение используют для завершения тренировки по развитию бицепсов. Оно в основном задействует короткую головку, хорошо ее сокращая и растягивая. Это упражнение также тренирует плечевые мышцы и моносуставной разгибатель локтя."/>
+            <column name="exercise_name" value="Сгибание рук с рукоятками верхних блоков"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="45"/>
+            <column name="exercise_effectiveness" value="6"/>
+            <column name="description"
+                    value="Это упражнение задействует бицепсы, плечевые мышцы и в меньшей степени плечелучевые мышцы, круглые пронаторы, все сгибатели кисти и пальцев. Во избежание отклонения туловища напрягите мышцы ягодиц, живота и спины"/>
+            <column name="exercise_name" value="Сгибание рук с грифом штанги"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="46"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это одно из лучших упражнений для изолированной проработки бицепсов. Оно тренирует также плечевые мышцы и в меньшей степени плечелучевые мышцы и круглые пронаторы."/>
+            <column name="exercise_name" value="Сгибание рук на тренажере LARRY-SCOTT"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="47"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это одно из лучших упражнений для локального воздействия на бицепсы."/>
+            <column name="exercise_name" value="Сгибание рук на скамье LARRY-SCOTT"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="48"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение прорабатывает мышцы - разгибатели запястья; длинный лучевой разгибатель запястья, короткий лучевой разгибатель запястья, разгибатель пальцев, разгибатель мизинца и локтевой разгибатель запястья."/>
+            <column name="exercise_name" value="Сгибание рук со штангой хватом сверху"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="49"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение укрепляет суставы запястья, которые часто бывают слабыми из-за недостаточной силы мышц разгибателей кисти."/>
+            <column name="exercise_name" value="Разгибание запястий со штангой хватом сверху"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="50"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение тренирует лучевой сгибатель запястья, длинную ладонную мышцу, локтевой сгибатель запястья, а также глубокие и поверхностные сгибатели пальцев, которые, несмотря на то, что расположены глубоко, обычно составляют основную часть от общего объема работы сгибателей запястья."/>
+            <column name="exercise_name" value="Сгибание запястий со штангой хватом снизу"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="51"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение изолированно тренирует трицепсы и локтевые мышцы."/>
+            <column name="exercise_name" value="Разгибание рук с рукояткой верхнего блока хватом сверху"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="52"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Во время разгибания рук работают локтевые мышцы и разгибатели запястья. Разгибатели кистей и пальцев стабилизируют кисти при выполнении изометрического напряжения во время упражнения."/>
+            <column name="exercise_name" value="Разгибание рук с рукояткой верхнего блока хватом снизу"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="53"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение прорабатывает преимущественно латеральную головку трицепса."/>
+            <column name="exercise_name" value="Разгибание одной руки с верхним блоком хватом снизу"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="54"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Лежа на горизонтальной скамье. Гриф штанги взять хватом сверху на прямых, вертикально поднятых руках…"/>
+            <column name="exercise_name" value="Разгибание рук со штангой лежа (французский жим)"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="55"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение позволяет контролировать работу и равномерно распределять нагрузку на все три головки трицепса."/>
+            <column name="exercise_name" value="Разгибание рук с гантелями лежа"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="56"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="В процессе движения особое внимание обратите на сокращение длинной головки трицепса, которая сокращается, напрягаясь в разогнутом вертикальном положении руки."/>
+            <column name="exercise_name" value="Разгибание одной руки с гантелью из-за головы"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="57"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Вертикальное положение рук способствует максимальному напряжению длинной головки трицепса."/>
+            <column name="exercise_name" value="Разгибание рук с одной гантелью из-за головы"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="58"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Вертикальное положение рук способствует наибольшему сокращению длинной головки трицепса, позволяя максимально включать ее в работу. Хват сверху помогает проработать латеральную головку трицепсов."/>
+            <column name="exercise_name" value="Разгибание рук с изогнутым грифом штанги из-за головы"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="59"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение великолепно подходит для доработки трицепсов"/>
+            <column name="exercise_name" value="Разгибание одной руки назад с гантелью в наклоне"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="60"/>
+            <column name="exercise_effectiveness" value="6"/>
+            <column name="description"
+                    value="Это упражнение прорабатывает трицепсы, грудные мышцы и передние отделы дельтовидных мышц. Чтобы дополнительно усилить нагрузку, положите на переднюю поверхность бедер отягощения."/>
+            <column name="exercise_name" value="Отжимание трицепсами спиной к скамье"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="61"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение нагружает в основном средние пучки дельтовидных мышц и верхнюю часть трапециевидных мышц."/>
+            <column name="exercise_name" value="Жим штанги из-за головы сидя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="62"/>
+            <column name="exercise_effectiveness" value="7"/>
+            <column name="description"
+                    value="Это упражнение, прежде всего, предназначено для тренинга средних частей дельтовидных мышц, а также верхних отделов трапециевидных мышц, передних зубчатых мышц и трицепсов."/>
+            <column name="exercise_name" value="Жим гантелей сидя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="63"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение развивает среднюю часть дельтовидной мышцы, состоящую из нескольких пучков, прикрепляющихся к плечевой кости."/>
+            <column name="exercise_name" value="Подъемы гантелей в стороны"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="64"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение для передних и средних дельт плеч. Является максимально эффективным для прицельной проработки мышц плечевого пояса, в меньшей степени в работу включаются трапециевидные мышцы и мышцы трицепса."/>
+            <column name="exercise_name" value="Отжимания на руках"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="65"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="При выполнении этого упражнения основное усилие концентрируется уже в начале движения. Лучших результатов можно достичь, делая 10-20 повторений."/>
+            <column name="exercise_name" value="Подъем гантели в сторону одной рукой лежа на боку"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="66"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение развивает дельтовидную мышцу, особенно ее среднюю многоперистую часть, состоящую из нескольких пучков в форме пера."/>
+            <column name="exercise_name" value="Подъем одной руки в сторону с нижнего блока"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="67"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Стоя. Ноги врозь. Спина прямая. Гриф штанги держать внизу у бедер, взяв ее чуть шире плеч хватом сверху."/>
+            <column name="exercise_name" value="Плечевая передняя протяжка"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="68"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение главным образом воздействует на среднюю часть дельтовидных мышц. Дополнительно влияет на надостные мышцы и верхнюю часть трапециевидных мышц при подъеме рук выше горизонтального уровня."/>
+            <column name="exercise_name" value="Подъемы рук в стороны на тренажере"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="69"/>
+            <column name="exercise_effectiveness" value="8"/>
+            <column name="description"
+                    value="Чтобы увеличить нагрузку на передние части дельтовидных мышц, заведите локти слегка вперед."/>
+            <column name="exercise_name" value="Жим штанги с груди сидя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="70"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение рекомендовано делать людям с хрупкими плечами. Оно заменяет упражнения, нередко приводящие к травмам, например, классический жим с гантелями с отведенными наружу локтями или жим штанги из-за головы."/>
+            <column name="exercise_name" value="Жим гантелей с поворотами запястий"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="71"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение воздействует главным образом на переднюю часть дельтовидной мышцы, ключичную часть большой грудной мышцы и в меньшей степени на среднюю часть дельтовидной мышцы."/>
+            <column name="exercise_name" value="Подъемы гантелей вперед попеременно"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="72"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Стоя. Ноги слегка расставить. Рукоятку тренажера взять хватом сверху, держа руку сбоку у бедра."/>
+            <column name="exercise_name" value="Подъем одной руки вперед с нижнего блока стоя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="73"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение задействует переднюю часть дельтовидных мышц, ключичную часть большой грудной мышцы и короткую головку бицепсов."/>
+            <column name="exercise_name" value="Подъемы рук вперед с одной гантелью"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="74"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение задействует переднюю часть дельтовидных мышц, поднимая штангу выше уровня плеч, вы усилите нагрузку на заднюю часть дельтовидной мышцы."/>
+            <column name="exercise_name" value="Подъемы штанги вперед"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="75"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение в основном задействует заднюю часть дельтовидных мышц."/>
+            <column name="exercise_name" value="Подъемы гантелей в стороны в наклоне вперед"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="76"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Стоя лицом к тренажеру. Руки, скрестив, поднять вперед, взять левой кистью правую рукоятку, а правой кистью - левую"/>
+            <column name="exercise_name" value="Перекрестные махи руками назад с верхних блоков"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="77"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение нагружает дельтовидные мышцы, в первую очередь их заднюю часть. В момент сведения лопаток в работу включаются ромбовидные мышцы, а также средние и нижние части трапециевидных мышц."/>
+            <column name="exercise_name" value="Перекрестные махи руками назад с нижних блоков в наклоне"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="78"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение прорабатывает дельтовидные мышцы, особенно заднюю часть, подостную мышцу, малую круглую мышцу."/>
+            <column name="exercise_name" value="Махи руками назад с рукоятками тренажера"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="79"/>
+            <column name="exercise_effectiveness" value="7"/>
+            <column name="description"
+                    value="Это упражнение задействует в первую очередь четырехглавые мышцы бедер и ягодичные мышцы."/>
+            <column name="exercise_name" value="Приседания с гантелями"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="80"/>
+            <column name="exercise_effectiveness" value="10"/>
+            <column name="description"
+                    value="Этот прием во время приседаний локализует больше нагрузки на четырехглавые мышцы, чем при классических приседаниях. Совершая полную амплитуду, вы вовлекаете в работу ягодичные мышцы."/>
+            <column name="exercise_name" value="Приседания со штангой на груди"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="81"/>
+            <column name="exercise_effectiveness" value="12"/>
+            <column name="description"
+                    value="Приседания разрабатывают главным образом четырехглавые мышцы, ягодичные мышцы, все приводящие мышцы, мышцы, выпрямляющие позвоночник, мышцы живота, а также седалищно-большеберцовые мышцы."/>
+            <column name="exercise_name" value="Приседания со штангой на плечах"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="82"/>
+            <column name="exercise_effectiveness" value="9"/>
+            <column name="description"
+                    value="Особенностью упражнения являются очень широко расставленные ноги с разведенными в стороны носками. Это дополнительно включает в работу внутренние мышцы бедра."/>
+            <column name="exercise_name" value="Широкие приседания"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="83"/>
+            <column name="exercise_effectiveness" value="8"/>
+            <column name="description"
+                    value="Это упражнение можно выполнять людям, которые страдают от болей в спине и поэтому не могут делать приседания. Тем не менее, обязательно прижимайте ягодицы к спинке тренажера."/>
+            <column name="exercise_name" value="Наклонный жим ногами"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="84"/>
+            <column name="exercise_effectiveness" value="8"/>
+            <column name="description"
+                    value="Это движение создает основную нагрузку на четырехглавые мышцы бедер. Если ступни выставить вперед, то основная нагрузка перейдет на мышцы ягодиц."/>
+            <column name="exercise_name" value="Приседания на тренажере НАСК SQUAT"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="85"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это движение лучше всего подходит для изолированной нагрузки на четырехглавые мышцы. Это упражнение обычно рекомендуют начинающим."/>
+            <column name="exercise_name" value="Разгибание ног"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="86"/>
+            <column name="exercise_effectiveness" value="7"/>
+            <column name="description"
+                    value="В отличие от обычного классического подъема штанги от пола, в этом упражнении более интенсивно работают четырехглавая мышца бедра и приводящая мышца бедра и в меньшей степени - мышцы спины."/>
+            <column name="exercise_name" value="Мертвые тяги в стиле сумо"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="87"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение вовлекает в работу всю группу седалищно-подколенных мышц бедер(бицепсы бедра), икроножные мышцы, а также более глубоко расположенные подколенные мышцы"/>
+            <column name="exercise_name" value="Сгибание ног лежа"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="88"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение вовлекает в работу все седалищно-подколенные мышцы бедра (полусухожильные, полуперепончатые, бицепсы бедра - короткие и длинные головки) и в меньшей мере икроножные мышцы."/>
+            <column name="exercise_name" value="Сгибание одной ноги стоя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="89"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение задействует все седалищно-подколенные мышцы бедра, а также в меньшей степени икроножные мышцы."/>
+            <column name="exercise_name" value="Сгибание ног сидя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="90"/>
+            <column name="exercise_effectiveness" value="7"/>
+            <column name="description"
+                    value="Это упражнение, разрабатывающее большую ягодичную мышцу и мышцы спины, оказывает благоприятное воздействие на седалищно-подколенные мышцы."/>
+            <column name="exercise_name" value="Подъемы торса 'с добрым утром'"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="91"/>
+            <column name="exercise_effectiveness" value="7"/>
+            <column name="description"
+                    value="Движения упражнения активно включают в работу большую ягодичную и седалищно-большеберцовую мышцу. Также хорошо задействованы мышцы, выпрямляющие позвоночник."/>
+            <column name="exercise_name" value="'Мертвые' тяги со штангой, ноги прямые"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="92"/>
+            <column name="exercise_effectiveness" value="7"/>
+            <column name="description"
+                    value="Упражнение отлично подходит для прокачки задней поверхности бедра и ягодичных мышц. Мышцы, выпрямляющие позвоночник почти не работают за счет прямой спины."/>
+            <column name="exercise_name" value="Поясничные прогибания с прямой спиной"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="93"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение задействует приводящие мышцы бедра. Оно великолепно формирует внутреннюю поверхность бедра при регулярном его применении."/>
+            <column name="exercise_name" value="Приведение одной ноги стоя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="94"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение тренирует приводящие мышцы. Здесь можно использовать более значительный вес отягощения, чем в упражнении с приведением нижнего блока, хотя и с более ограниченным диапазоном движения."/>
+            <column name="exercise_name" value="Сведение ног сидя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="95"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение тренирует трехглавые мышцы голени. Чтобы правильно напрягать эти мышцы, очень важно подниматься на носках как можно выше в каждом повторении движения."/>
+            <column name="exercise_name" value="Подъемы на носки стоя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="96"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение задействует трицепс голени. Для лучшего результата выполняйте упражнение до появления чувства жжения."/>
+            <column name="exercise_name" value="Подъем на носок одной ноги стоя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="97"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это - хорошее упражнение для тщательной проработки. Оно задействует трицепс голени и, в частности, икроножные мышцы."/>
+            <column name="exercise_name" value="Подъемы на носки в наклоне 'ослик'"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="98"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение отлично нагружает икроножные и камбаловидные мышцы голени, за счет чего икра выглядит гораздо объемнее, если смотреть на нее сзади."/>
+            <column name="exercise_name" value="Жимы стопами на тренажере"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="99"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение задействует преимущественно камбаловидные мышцы. Основная функция камбаловидной мышиы состоит в разгибании голени."/>
+            <column name="exercise_name" value="Разгибание голени сидя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="100"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="В отличие от проработки камбаловидных мышц на тренажере этот вид упражнения не позволяет использовать тяжелый вес, так как потребует чрезмерных усилий."/>
+            <column name="exercise_name" value="Разгибание голени сидя, со штангой на коленях"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="101"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение формирует мышцы передней части голени, делает их более выносливыми и сильными."/>
+            <column name="exercise_name" value="Подъемы носков голени сидя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="102"/>
+            <column name="exercise_effectiveness" value="5"/>
+            <column name="description"
+                    value="Это упражнение в первую очередь нагружает большую ягодичную мышцу. Выпады в тренажере Смита – одно из лучших упражнения для красивых ягодиц."/>
+            <column name="exercise_name" value="Выпады в тренажере Смита"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="103"/>
+            <column name="exercise_effectiveness" value="7"/>
+            <column name="description"
+                    value="Это упражнение в первую очередь задействует большую ягодичную мышцу."/>
+            <column name="exercise_name" value="Выпады со штангой на плечах"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="104"/>
+            <column name="exercise_effectiveness" value="7"/>
+            <column name="description"
+                    value="Это упражнение разрабатывает главным образом большие ягодичные мышцы и четырехглавые мышцы бедер"/>
+            <column name="exercise_name" value="Выпады с гантелями"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="105"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение вовлекает в работу главным образом большую ягодичную мышцу и в меньшей степени седалищно-большеберцовую мышцу, исключая короткую головку бицепса бедра."/>
+            <column name="exercise_name" value="Махи ногой назад с нижнего блока"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="106"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение задействует главным образом большую ягодичную мышцу, а также в меньшей степени полусухожильную, полуперепончатую мышцы и длинную головку бицепса бедра."/>
+            <column name="exercise_name" value="Махи ногой назад с рычагом тренажера"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="107"/>
+            <column name="exercise_effectiveness" value="1"/>
+            <column name="description"
+                    value="Это упражнение, выполняемое прямой ногой, разрабатывает седалищно-подколенные мышцы и большую ягодичную мышцу. При согнутой в колене ноге разрабатывается только большая ягодичная мышца, но менее интенсивно."/>
+            <column name="exercise_name" value="Махи ногой назад на полу"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="108"/>
+            <column name="exercise_effectiveness" value="2"/>
+            <column name="description"
+                    value="Это упражнение задействует главным образом седалищно-подколенные и большие ягодичные мышцы."/>
+            <column name="exercise_name" value="'Мостик' лежа"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="109"/>
+            <column name="exercise_effectiveness" value="2"/>
+            <column name="description"
+                    value="Это упражнение вовлекает в работу среднюю ягодичную мышцу и расположенную глубже малую ягодичную мышцу."/>
+            <column name="exercise_name" value="Махи ногой в сторону с нижнего блока"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="110"/>
+            <column name="exercise_effectiveness" value="2"/>
+            <column name="description"
+                    value="Это упражнение прекрасно подходит для формирования средней ягодичной мышцы и малой ягодичной мышцы, расположенной глубже. Для достижения лучших результатов советуем выполнять это упражнение чаще и с многократными повторениями."/>
+            <column name="exercise_name" value="Махи ногой в сторону с рычагом тренажера"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="111"/>
+            <column name="exercise_effectiveness" value="2"/>
+            <column name="description"
+                    value="Это упражнение задействует средние и малые ягодичные мышцы."/>
+            <column name="exercise_name" value="Махи ногой в сторону, лежа на боку"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="112"/>
+            <column name="exercise_effectiveness" value="3"/>
+            <column name="description"
+                    value="Это упражнение великолепно подходит для женщин, поскольку повышенный мышечный тонус бедер придает им округлость, что позволяет выделить талию, которая станет казаться более тонкой."/>
+            <column name="exercise_name" value="Разведение ног на тренажере"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="113"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Отличное упражнение для проработки прямых мышц живота. В зависимости от положения туловища можно делать акцент, как на верхние, так и на нижние участки пресса."/>
+            <column name="exercise_name" value="Сворачивание туловища с верхним блоком"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="114"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение позволяет удобно подбирать и регулировать необходимый вес для выполнения. Рекомендуется начинающим спортсменам."/>
+            <column name="exercise_name" value="Сворачивание туловища на тренажере"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="115"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Упражнение отлично прорабатывает как верхние, так и нижние мышцы пресса, вовлекает в работу косые мышцы живота (мышцы стабилизаторы)."/>
+            <column name="exercise_name" value="Скручивания на фитболе"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="116"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это отличное упражнение для пресса, оно в основном нагружает прямые мышцы живота."/>
+            <column name="exercise_name" value="Сворачивание туловища на полу"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="117"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это прекрасное упражнение для разработки прямых мышц пресса живота. Оно также задействует, но менее интенсивно, косые мышцы живота."/>
+            <column name="exercise_name" value="Подъемы туловища на вертикальной скамье"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="118"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение следует выполнять с многократными повторениями. Оно позволяет разрабатывать все мышцы живота."/>
+            <column name="exercise_name" value="Подъемы туловища на наклонной скамье"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="119"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение концентрирует усилия на прямых мышцах живота, особенно на их верхних частях."/>
+            <column name="exercise_name" value="Сворачивание туловища с голенью на скамье"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="120"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение задействует сгибатели бедра, а также косые мышцы живота, однако главным образом оно разрабатывает прямые мышцы живота."/>
+            <column name="exercise_name" value="Подъемы туловища"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="121"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Отличное упражнение для прокачки пресса живота. Оно разрабатывает прямые мышцы живота и в меньшей степени внутренние и наружные косые мышцы живота."/>
+            <column name="exercise_name" value="Подъемы туловища у гимнастической стенки"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="122"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение задействует прямые мышцы пресса и меньшей степени косые мышцы живота."/>
+            <column name="exercise_name" value="Подъемы ног на наклонной скамье"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="123"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение разрабатывает мышцы - сгибатели бедер, в первую очередь подвздошно-поясничные, а также косые и прямые мышцы живота (особенно интенсивно задействованы их нижние части)."/>
+            <column name="exercise_name" value="Подъемы коленей в упоре"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="124"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Упражнение прорабатывает как пресс живота, так и мышцы спины. Для более изолированной работы мышц живота не опускайте колени ниже горизонтального положения."/>
+            <column name="exercise_name" value="Подъемы коленей в висе"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="125"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это отличное упражнение для проработки внутренних и наружных косых мышц живота."/>
+            <column name="exercise_name" value="Развороты туловища с грифом"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="126"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение концентрирует нагрузку на косых мышцах живота, особенно на той стороне, которая сгибается, а также в меньшей мере вовлекает в работу прямые мышцы живота."/>
+            <column name="exercise_name" value="Боковые наклоны стоя"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="127"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Основная нагрузка ложится на косую и прямую мышцы живота на той стороне, в которую осуществляется сгибание."/>
+            <column name="exercise_name" value="Боковые подъемы туловища на римском стуле"/>
+        </insert>
+        <insert tableName="exercise">
+            <column name="ex_id" value="128"/>
+            <column name="exercise_effectiveness" value="4"/>
+            <column name="description"
+                    value="Это упражнение задействует в первую очередь наружные и внутренние косые мышцы живота, вовлекая в работу также прямые мышцы живота."/>
+            <column name="exercise_name" value="Вращения туловища стоя на тренажере 'Твист'"/>
+        </insert>
+        <rollback/>
+    </changeSet>
+
+    <changeSet id="tag-1.0" author="ivko">
+        <tagDatabase tag="1.0"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,11 @@
+.card-content {
+    height: 100px;
+}
+
+.checked {
+    font-weight: bold;
+    color: red !important;
+    text-transform: uppercase;
+    transition: color 0.5s;
+    /* transition: text-transform 0.5s; */
+}

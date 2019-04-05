@@ -1,0 +1,44 @@
+[
+  {
+    "rest_id": 1,
+    "restrictionName": "Лучезапястный",
+    "userSelect": true,
+    "evaluation": 5
+  },
+  {
+    "rest_id": 2,
+    "restrictionName": "Локотевой",
+    "userSelect": false,
+    "evaluation": 0
+  },
+  {
+    "rest_id": 3,
+    "restrictionName": "Плечевой",
+    "userSelect": true,
+    "evaluation": 6
+  },
+  {
+    "rest_id": 4,
+    "restrictionName": "Спина",
+    "userSelect": false,
+    "evaluation": 0
+  },
+  {
+    "rest_id": 5,
+    "restrictionName": "Тазобедренный",
+    "userSelect": true,
+    "evaluation": 7
+  },
+  {
+    "rest_id": 6,
+    "restrictionName": "Коленный",
+    "userSelect": false,
+    "evaluation": 0
+  },
+  {
+    "rest_id": 7,
+    "restrictionName": "Голеностоп",
+    "userSelect": true,
+    "evaluation": 8
+  }
+]

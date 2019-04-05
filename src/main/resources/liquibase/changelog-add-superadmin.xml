@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="add-superadmin-in-user-table" author="ivko">
+        <validCheckSum>7:391d9e4213facaddddbb59631acc0162</validCheckSum>
+        <insert tableName="user">
+            <column name="user_id" value="1"/>
+            <column name="email" value="admin@admin.com"/>
+            <column name="password"
+                    value="$2a$10$zSoLk9CtNmG92RI.J5OXtOG0qpsJkEe8lJnpUhHGvh0RWCWFL86XS"/>
+            <column name="role"
+                    value="ROLE_ADMIN"/>
+            <column name="secret_answer"
+                    value="admin"/>
+            <column name="secret_question"
+                    value="admin"/>
+            <column name="state"
+                    value="ACTIVE"/>
+            <column name="username"
+                    value="admin"/>
+        </insert>
+        <rollback/>
+    </changeSet>
+
+    <changeSet id="tag-add-superadmin" author="ivko">
+        <tagDatabase tag="add-superadmin"/>
+    </changeSet>
+</databaseChangeLog>

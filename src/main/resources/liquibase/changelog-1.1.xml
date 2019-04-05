@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="2" author="ivko">
+        <validCheckSum>7:391d9e4213facaddddbb59631acc0162</validCheckSum>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="1"/>
+            <column name="group_name"
+                    value="Трапеции"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="2"/>
+            <column name="group_name"
+                    value="Дельты"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="3"/>
+            <column name="group_name"
+                    value="Грудные"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="4"/>
+            <column name="group_name"
+                    value="Широчайшие"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="5"/>
+            <column name="group_name"
+                    value="Разгибатели спины"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="6"/>
+            <column name="group_name"
+                    value="Икры"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="7"/>
+            <column name="group_name"
+                    value="Задняя поверхность бедра"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="8"/>
+            <column name="group_name"
+                    value="Квадрицепс"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="9"/>
+            <column name="group_name"
+                    value="Ягодичные"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="10"/>
+            <column name="group_name"
+                    value="Внутреняя повернхность бедра"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="11"/>
+            <column name="group_name"
+                    value="Трицепсы"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="12"/>
+            <column name="group_name"
+                    value="Бицепсы"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="13"/>
+            <column name="group_name"
+                    value="Пресс"/>
+        </insert>
+        <insert tableName="group_of_muscles">
+            <column name="group_of_muscles_id" value="14"/>
+            <column name="group_name"
+                    value="Дельты"/>
+        </insert>
+        <rollback/>
+    </changeSet>
+
+    <changeSet id="tag-1.1" author="ivko">
+        <tagDatabase tag="1.1"/>
+    </changeSet>
+</databaseChangeLog>
