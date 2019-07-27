@@ -1,3 +1,5 @@
+[![Hits-of-Code](https://hitsofcode.com/github/krangii17/FitnessApp)](https://hitsofcode.com/view/github/krangii17/FitnessApp)
+
 **Fitness application**
 
 You can choose training program by your restrictions and your goals.
