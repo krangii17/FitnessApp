@@ -1,0 +1,33 @@
+image: java:8
+
+services:
+  - mysql:5.6
+
+variables:
+  MYSQL_DATABASE: fitnesapp_db
+  MYSQL_ROOT_PASSWORD: 1234567890
+
+stages:
+  - compile
+  - test
+
+before_script:
+  - ls
+  - chmod 755 mvnw
+
+maven compile:
+  stage: compile
+  script: ./mvnw clean test compile
+  only:
+    - master
+
+maven test:
+  stage: test
+  script: ./mvnw clean test compile
+
+build:
+  stage: build
+  script:  ./mvnw clean compile
+  artifacts:
+    paths:
+      - /FitnessApp/target/FitnessApp.war
